@@ -1,20 +1,21 @@
 import React from 'react';
 // import { useMediaQuery} from '@mary-fox/react-media-query';
-import { useMediaQuery } from 'react-media-query-web';
+// import { useMediaQuery } from 'react-media-query-web';
 
+import { useMediaQuery } from 'react-media-query-web2';
 
 const Example = () => {
   const isDesktopOrLaptop = useMediaQuery({
-    minWidth: 1224,
+    query: "(min-width: 1224px)", // Добавляем "px" и знак сравнения
   });
-  const isBigScreen = useMediaQuery({ minWidth: 1824 });
-  const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 });
-  const isPortrait = useMediaQuery({ orientation: 'portrait' }); // Запрос для устройств в портретной ориентации
-  const isRetina = useMediaQuery({ minResolution: '2dppx' }); // Запрос для устройств с высокой плотностью пикселей (retina)
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" }); // Добавляем "px" и знак сравнения
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" }); // Добавляем "px" и знак сравнения
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' }); // Запрос для устройств в портретной ориентации
+  const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' }); // Запрос для устройств с высокой плотностью пикселей (retina)
 
   return (
     <div>
-      <h1>Device Test!</h1>
+      <h1>Device Test1!</h1>
       {isDesktopOrLaptop && <p>You are a desktop or laptop</p>}
       {isBigScreen && <p>You have a huge screen</p>}
       {isTabletOrMobile && <p>You are a tablet or mobile phone</p>}
