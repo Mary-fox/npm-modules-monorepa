@@ -13,7 +13,7 @@ const Visibility = () => {
       console.log('Second handler:', isVisible);
     });
 
-    setTimeout(() => unsubscribeSecondHandler(), 5000); // Unsubscribe from 'second handler' after 5 seconds
+    setTimeout(() => unsubscribeSecondHandler(), 5000); // отписываемся от 'second handler' через 5 секунд
   }, [onVisibilityChange]);
 
   return (

@@ -1,7 +1,6 @@
 {
   "name": "@mary-fox/react-document-visibility",
   "version": "0.1.0",
-  "private": true,
   "source": "useDocumentVisibility.ts",
   "main": "dist/useDocumentVisibility.cjs.js",
   "module": "dist/useDocumentVisibility.esm.js",
