@@ -1,6 +1,6 @@
 {
-  "name": "react-media-query-web",
-  "version": "0.1.0",
+  "name": "react-media-query-web2",
+  "version": "0.2.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.esm.js",
   "types": "dist/esm/index.d.js",

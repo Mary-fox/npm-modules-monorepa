@@ -1,11 +1,13 @@
 import React from 'react';
 // import { MediaQuery } from '@mary-fox/react-media-query';
-import  { MediaQuery }  from 'react-media-query-web';
+// import  { MediaQuery }  from 'react-media-query-web';
+// import { MediaQuery } from '@tvivls/react-responsive';
+import { MediaQuery } from 'react-media-query-web2';
 
 const MediaQueryTest = () => {
     return (
         <div>
-          <h1>Device Test!</h1>
+          <h1>Device Test2!</h1>
           <MediaQuery minWidth={1224}>
             <p>You are a desktop or laptop</p>
           </MediaQuery>
