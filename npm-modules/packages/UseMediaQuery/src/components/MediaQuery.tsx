@@ -16,3 +16,4 @@ const MediaQuery: React.FC<MediaQueryProps> = ({ children, ...mediaQueryOptions 
 };
 
 export default MediaQuery;
+
