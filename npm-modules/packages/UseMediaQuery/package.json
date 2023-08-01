@@ -1,5 +1,5 @@
 {
-  "name": "@mary-fox/react-media-query",
+  "name": "react-media-query-web",
   "version": "0.1.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.esm.js",

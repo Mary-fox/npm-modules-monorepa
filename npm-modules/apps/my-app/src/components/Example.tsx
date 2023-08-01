@@ -1,5 +1,6 @@
 import React from 'react';
-import { useMediaQuery} from '@mary-fox/react-media-query';
+// import { useMediaQuery} from '@mary-fox/react-media-query';
+import { useMediaQuery } from 'react-media-query-web';
 
 
 const Example = () => {

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDocumentVisibility } from '@mary-fox/react-document-visibility';
+import { useDocumentVisibility } from 'react-document-visibility-web';
 
 const Visibility = () => {
   const { count, visible, onVisibilityChange } = useDocumentVisibility();

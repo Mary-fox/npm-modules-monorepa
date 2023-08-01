@@ -1,5 +1,5 @@
 {
-  "name": "@mary-fox/react-document-visibility",
+  "name": "react-document-visibility-web",
   "version": "0.1.0",
   "source": "useDocumentVisibility.ts",
   "main": "dist/useDocumentVisibility.cjs.js",
