@@ -15,9 +15,11 @@ export const useMediaQuery = ({ query }: QueryType, isSSR = false) => {
       const handleMediaQuery = (event: MediaQueryListEvent) => {
         setMatches(event.matches);
       };
+
+
       queryList.current.addEventListener('change', handleMediaQuery);
       setMatches(queryList.current.matches);
-      return () => {
+      return ()   => {
         queryList.current?.removeEventListener('change', handleMediaQuery);
       };
     }
