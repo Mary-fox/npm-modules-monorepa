@@ -1,10 +1,12 @@
-import React from "react";
 import { MediaQuery } from "react-media-query-web2";
 
 const MediaQueryTest = () => {
   return (
     <div>
       <h1>Device Test2!</h1>
+      <MediaQuery maxWidth={1224}>
+        <p>You are a mobile</p>
+      </MediaQuery>
       <MediaQuery minWidth={1224}>
         <p>You are a desktop or laptop</p>
       </MediaQuery>

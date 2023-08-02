@@ -33,7 +33,7 @@ export const buildMediaQuery = (
 ): string => {
   if (Object.keys(props).length === 0)
     throw new Error("No props provided. Returning a default media query.");
-  return Object.keys(props)
+  return Object.entries(props)
     .map(([key, value]) => getQueryString(key, value))
     .join(" and ");
 };

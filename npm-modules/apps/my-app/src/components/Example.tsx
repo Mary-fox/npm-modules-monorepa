@@ -1,4 +1,3 @@
-import React from "react";
 import { useMediaQuery } from "react-media-query-web2";
 
 const Example = () => {
