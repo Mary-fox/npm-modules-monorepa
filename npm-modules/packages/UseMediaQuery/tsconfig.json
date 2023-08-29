@@ -2,9 +2,8 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "module": "esnext",
-    "typeRoots": ["./node_modules/@types", "./declaration.d.ts"],
     "declaration": true,
-    "target": "es2017",
+    "target": "es6",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

@@ -6,6 +6,8 @@ export interface DocumentVisibilityHook {
   onVisibilityChange: (handler: (isVisible: boolean) => void) => () => void;
 }
 
+export type VisibilityChangeHandler = (isVisible: boolean) => void;
+
 export const useDocumentVisibility = (): DocumentVisibilityHook => {
   const [visible, setVisible] = useState<boolean>(
     document.visibilityState === "visible",
@@ -28,18 +30,15 @@ export const useDocumentVisibility = (): DocumentVisibilityHook => {
     };
   }, [handleVisibilityChange]);
 
-  const onVisibilityChange = useCallback(
-    (handler: (isVisible: boolean) => void) => {
-      const wrappedHandler = () =>
-        handler(document.visibilityState === "visible");
-      document.addEventListener("visibilitychange", wrappedHandler);
+  const onVisibilityChange = useCallback((handler: VisibilityChangeHandler) => {
+    const wrappedHandler = () =>
+      handler(document.visibilityState === "visible");
+    document.addEventListener("visibilitychange", wrappedHandler);
 
-      return () => {
-        document.removeEventListener("visibilitychange", wrappedHandler);
-      };
-    },
-    [],
-  );
+    return () => {
+      document.removeEventListener("visibilitychange", wrappedHandler);
+    };
+  }, []);
 
   return { visible, count, onVisibilityChange };
 };

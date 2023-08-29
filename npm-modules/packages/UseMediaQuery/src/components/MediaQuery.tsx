@@ -4,7 +4,7 @@ import { useMediaQuery } from "../hook/UseMediaQuery";
 type ResolutionType = `${number}dppx` | number;
 
 export type QueryProps = {
-  orientation?: string;
+  orientation?: "portrait" | "landscape";
   minResolution?: ResolutionType;
   maxResolution?: ResolutionType;
   minWidth?: number;
@@ -31,7 +31,7 @@ const getQueryString = (
 export const buildMediaQuery = (
   props: Omit<QueryProps, "children">,
 ): string => {
-  if (Object.keys(props).length === 0)
+  if (!Object.keys(props).length)
     throw new Error("No props provided. Returning a default media query.");
   return Object.entries(props)
     .map(([key, value]) => getQueryString(key, value))

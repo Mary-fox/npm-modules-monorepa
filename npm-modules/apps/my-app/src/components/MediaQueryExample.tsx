@@ -1,6 +1,6 @@
 import { MediaQuery } from "react-media-query-web2";
 
-const MediaQueryTest = () => {
+const MediaQueryExample = () => {
   return (
     <div>
       <h1>Device Test2!</h1>
@@ -22,4 +22,4 @@ const MediaQueryTest = () => {
   );
 };
 
-export default MediaQueryTest;
+export default MediaQueryExample;

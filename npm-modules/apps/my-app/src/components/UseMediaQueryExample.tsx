@@ -1,6 +1,6 @@
 import { useMediaQuery } from "react-media-query-web2";
 
-const Example = () => {
+const UseMediaQueryExample = () => {
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 1224px)",
   });
@@ -21,4 +21,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default UseMediaQueryExample;

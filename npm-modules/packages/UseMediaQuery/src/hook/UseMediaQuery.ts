@@ -1,11 +1,11 @@
-import {useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export type QueryType = {
   query: string;
 };
 
 export const useMediaQuery = ({ query }: QueryType, initialState = false) => {
-  const [matches, setMatches] = useState(initialState);
+  const [matches, setMatches] = useState(initialState ? false : undefined);
   // хранения текущего состояния "matches"
   const queryList = useRef<MediaQueryList | null>(null);
 
