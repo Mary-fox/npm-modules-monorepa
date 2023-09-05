@@ -1,0 +1,19 @@
+{
+  "name": "react-document-visibility-web",
+  "version": "0.1.0",
+  "source": "useDocumentVisibility.ts",
+  "main": "dist/useDocumentVisibility.cjs.js",
+  "module": "dist/useDocumentVisibility.esm.js",
+  "types": "dist/useDocumentVisibility.d.ts",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "build": "microbundle"
+  }
+}
