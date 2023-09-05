@@ -4,8 +4,13 @@ export type QueryType = {
   query: string;
 };
 
-export const useMediaQuery = ({ query }: QueryType, initialState = false) => {
-  const [matches, setMatches] = useState(initialState ? false : undefined);
+export const useMediaQuery = ({ query }: QueryType) => {
+  const [matches, setMatches] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia(query).matches;
+    }
+    return false;
+  });
   // хранения текущего состояния "matches"
   const queryList = useRef<MediaQueryList | null>(null);
 
